@@ -1,0 +1,111 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+}
+
+.sideBar {
+    padding-top: 100px;
+    width: 50px;
+    height: 100vh;
+    float: left;
+    align-items: flex-start;
+    background-color: var(--whiteColorDeam);
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+}
+
+.sideBar .logoDiv {
+    padding: 1rem;
+    justify-content: center;
+}
+
+.sideBar .menu {
+    padding: 1rem;
+}
+
+
+.sideBar .menu .navItem .navList {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sideBar .menu .navItem .navList::after {
+    display: none;
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    width: 3px;
+    height: 25%;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    background: var(--PrimaryColor);
+}
+
+.sideBar .menu .navItem .navList::before {
+    display: none;
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    right: 0;
+    width: 3px;
+    height: 25%;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    background: var(--SecondaryColor);
+}
+
+.sideBar .menu .navItem .navList .icon {
+    font-size: 15px;
+    color: var(--blackColor);
+}
+
+.sideBar .menu .navItem .navList:hover::after, .sideBar .menu .navItem .navList:hover::before {
+    display: block;
+}
+
+.sideBar .menu .navItem .navList:hover .icon {
+    color: var(--PrimaryColor);
+}
+
+@media screen and (min-width: 500px) {
+    .sideBar {
+        width: 70px;
+    }
+
+    .sideBar .menu .navItem .navList .icon {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .sideBar {
+        width: 80px;
+    }
+    .sideBar .menu .navItem .navList .icon {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .sideBar {
+        width: 100px;
+    }
+    .sideBar .menu .navItem .navList .icon {
+        font-size: 30px;
+    }
+}

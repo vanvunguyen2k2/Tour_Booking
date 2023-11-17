@@ -1,0 +1,135 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+  }
+.details {
+    padding-top: 120px;
+    width: 100%;
+    position: relative;
+}
+.details .info {
+    width: 35%;
+    float: right !important;
+}
+
+.details .descript {
+    width: 60%;
+    float: left !important;
+}
+.details .info .card {
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+    border-radius: 5px;
+}
+
+.details .info .card .table-detail {
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-detail tr {
+  border-bottom: 1px solid #000; 
+  height: 50px;/* You can adjust the border style and color as needed */
+}
+
+.table-detail td:first-child {
+  width: 40%;
+}
+
+.table-detail td:last-child {
+  width: 60%;
+}
+
+.table-detail .icon {
+  font-size: 15px;
+  color: var(--blackColor);
+  margin-right: 5px;
+}
+
+.name-detail {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.details .title {
+  font-weight: 600;
+  margin: 10px;
+}
+
+.card-price {
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+  border-radius: 5px;
+  color: var(--cardBG);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.price-title {
+  color: var(--blackColor);
+}
+
+.details .descript .img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.price-tag {
+  font-size: 30px;
+  display: flex;
+  color: var(--SecondaryColor);
+  font-weight: 600;
+  justify-content: right;
+}
+
+.booking-btn {
+  background-color: var(--gradientColor);
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.descript-title {
+  color: var(--PrimaryColor);
+  font-size: 25px;
+}
+
+hr {
+  border: 1px solid var(--PrimaryColor);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .details {
+        display: flex;
+      flex-direction: column; /* Stack columns on top of each other */
+    }
+  
+    .descript {
+        width: 100% ;
+      flex: 1; /* 100% width for smaller screens */
+    }
+  
+    .info {
+        width: 100% !important;
+
+      flex: 1; /* 100% width for smaller screens */
+    }
+
+    .details .descript .img {
+      width: 167%;
+      height: auto;
+    }
+    .details .title::after {
+      display: none;
+    }
+  }

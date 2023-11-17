@@ -1,0 +1,66 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+    --cardHover: rgb(255, 255, 255);
+}
+
+.profile {
+    padding-top: 100px;
+    width: 20vw;
+    height: 100vh;
+    float: left;
+    align-items: flex-start;
+    background-color: var(--whiteColorDeam);
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.fullName {
+    text-align: center;
+    font-size: 15px;
+}
+
+.username {
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.username:hover {
+    color: var(--PrimaryColor);
+}
+
+.personalInfo div {
+    font-weight: 550;
+}
+.personalInfo {
+    margin: 15px;
+    text-wrap: wrap;
+    font-size: 10px;
+    overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 768px) {
+    .personalInfo {
+        font-size: 15px;
+    }
+
+    .fullName, .username {
+        font-size: 20px;
+    }
+}
